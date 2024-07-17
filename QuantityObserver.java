@@ -2,9 +2,12 @@ public class QuantityObserver implements OrderObserver {
     @Override
     public void update(Order order) {
         if (order.getItemCount() > 5) {
-            System.out.println("QuantityObserver: Free shipping applied.");
+            order.setShippingCost(0);
+            System.out.println("QuantityObserver: Free shipping applied. Shipping cost: " + order.getShippingCost());
         } else {
-            System.out.println("QuantityObserver: Default shipping cost applied.");
+            order.setShippingCost(10); // Default shipping cost
+            System.out.println("QuantityObserver: Default shipping cost applied. Shipping cost: " + order.getShippingCost());
         }
     }
 }
+

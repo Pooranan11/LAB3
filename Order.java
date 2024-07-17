@@ -1,4 +1,3 @@
-// Order.java
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,6 +5,7 @@ public class Order {
     private int id;
     private double itemCost = 0;
     private int itemCount = 0;
+    private double shippingCost = 10;  // Default shipping cost
     private List<OrderObserver> observers = new ArrayList<>();
 
     public Order(int id) {
@@ -48,4 +48,13 @@ public class Order {
     public void setItemCount(int itemCount) {
         this.itemCount = itemCount;
     }
+
+    public double getShippingCost() {
+        return shippingCost;
+    }
+
+    public void setShippingCost(double shippingCost) {
+        this.shippingCost = shippingCost;
+    }
 }
+

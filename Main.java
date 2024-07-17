@@ -13,5 +13,10 @@ public class Main {
         order.addItem(30);
         order.addItem(20);
         order.addItem(10);   // This should trigger the QuantityObserver
+
+        // Display final costs
+        System.out.println("Final total cost: " + order.getItemCost());
+        System.out.println("Final shipping cost: " + order.getShippingCost());
     }
 }
+
